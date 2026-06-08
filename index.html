@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ELSA Lab – Project Planning</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -400,6 +398,7 @@ tr.str:hover .rdel-s{opacity:1}
       <option value="M">Milestones (M)</option>
     </select>
     <button class="btn btna" onclick="openAdd()">+ Add row</button>
+    <button class="btn btna" onclick="exportHTML()" title="Download an HTML file with your edits baked in — upload this to GitHub">⬇ Save as HTML</button>
     <button class="btn btnc" onclick="exportCSV()">↓ CSV</button>
     <button class="btn btnc" onclick="resetData()" title="Discard saved edits and restore the original plan">↺ Reset</button>
   </div>
@@ -407,7 +406,12 @@ tr.str:hover .rdel-s{opacity:1}
 
 <!-- FIXED STATS BAR -->
 <div id="stats-bar">
-  <div class="stats" id="stats"></div>
+  <div class="stats" id="stats">
+    <div class="stat"><span class="sv">49</span><span class="sl">Total</span></div>
+    <div class="stat"><span class="sv" style="color:#22C55E">10</span><span class="sl">Done</span></div>
+    <div class="stat"><span class="sv" style="color:#4CA8E8">7</span><span class="sl">Active</span></div>
+    <div class="stat"><span class="sv" style="color:#64748B">32</span><span class="sl">Pending</span></div>
+    <div class="stat"><span class="sv">20%</span><span class="sl">Complete</span></div></div>
   <div class="legend">
     <span style="font-weight:700;color:var(--t2);font-size:10px">WP</span>
     <span class="leg"><span class="ldot" style="background:#4CA8E8"></span>WP1</span>
@@ -429,40 +433,624 @@ tr.str:hover .rdel-s{opacity:1}
 <div id="scrollbar-wrap">
   <button class="sb-arrow" id="sb-left" onclick="scrollByPx(-200)" title="Scroll left">‹</button>
   <div id="scrollbar-track" onclick="trackClick(event)">
-    <div id="scrollbar-thumb" onmousedown="startDrag(event)"></div>
+    <div id="scrollbar-thumb" onmousedown="startDrag(event)" style="display: block; width: 1440.88px; left: 0px;"></div>
   </div>
   <button class="sb-arrow" id="sb-right" onclick="scrollByPx(200)" title="Scroll right">›</button>
-  <span class="sb-label" id="sb-label">Year 1</span>
+  <span class="sb-label" id="sb-label">Year 2</span>
 </div>
 
 <!-- CHART -->
-<div id="main"><div id="chart"></div></div>
+<div id="main"><div id="chart"><table style="width:2248px;table-layout:fixed">
+<colgroup><col class="cid"><col class="cname"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"></colgroup>
+<thead>
+  <tr class="yr">
+    <th class="cid-yr" style="width:48px;left:0"></th>
+    <th class="cn-yr" style="width:400px;left:48px"></th>
+    <th colspan="4" class="" style="min-width:360px;width:360px">
+      Year 1 <span style="font-size:10px;font-weight:500;color:var(--t3)">· 2025–26</span>
+    </th><th colspan="4" class="yeven" style="min-width:360px;width:360px">
+      Year 2 <span style="font-size:10px;font-weight:500;color:var(--t3)">· 2026–27</span>
+    </th><th colspan="4" class="" style="min-width:360px;width:360px">
+      Year 3 <span style="font-size:10px;font-weight:500;color:var(--t3)">· 2027–28</span>
+    </th><th colspan="4" class="yeven" style="min-width:360px;width:360px">
+      Year 4 <span style="font-size:10px;font-weight:500;color:var(--t3)">· 2028–29</span>
+    </th><th colspan="4" class="" style="min-width:360px;width:360px">
+      Year 5 <span style="font-size:10px;font-weight:500;color:var(--t3)">· 2029–30</span>
+    </th>
+  </tr>
+</thead>
+<tbody><tr class="wpr" style="background:rgba(76,168,232,.07)">
+      <td class="ci tci" style="background:rgba(76,168,232,.07);border-left:3px solid #4CA8E8"></td>
+      <td class="cn" style="background:rgba(76,168,232,.07);color:#4CA8E8;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:0 8px;white-space:nowrap">WP1 · Generating Knowledge — Legal, Ethical &amp; Societal Barriers</td>
+      <td colspan="20" style="background:rgba(76,168,232,.07);position:relative">
+        <div class="tday" style="left:180px;opacity:.4"></div>
+      </td>
+    </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(0)"><button class="rdel" onclick="event.stopPropagation();qd(0)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(0)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Postdoc (law) – James Hazel – 0.6 FTE for 24 months">Postdoc (law) – James Hazel – 0.6 FTE for 24 months</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:690px;background:rgba(76,168,232,.25);border:1.5px solid #4CA8E8;color:#C8E6FF" onclick="oe(0)" onmouseenter="showTip(event,0)" onmouseleave="hideTip()"></div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(1)"><button class="rdel" onclick="event.stopPropagation();qd(1)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(1)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Postdoc (ethics) – 0.25 FTE for 24 months">Postdoc (ethics) – 0.25 FTE for 24 months</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:690px;background:rgba(76,168,232,.25);border:1.5px solid #4CA8E8;color:#C8E6FF" onclick="oe(1)" onmouseenter="showTip(event,1)" onmouseleave="hideTip()"></div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(2)">T1.1<button class="rdel" onclick="event.stopPropagation();qd(2)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(2)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Literature review and Theoretical Framework Development">Literature review and Theoretical Framework Development</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:330px;background:rgba(76,168,232,.25);border:1.5px solid #4CA8E8;color:#C8E6FF" onclick="oe(2)" onmouseenter="showTip(event,2)" onmouseleave="hideTip()">T1.1</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(3)">T1.2<button class="rdel" onclick="event.stopPropagation();qd(3)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(3)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Stakeholder Interviews">Stakeholder Interviews</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:180px;width:330px;background:rgba(76,168,232,.25);border:1.5px solid #4CA8E8;color:#C8E6FF" onclick="oe(3)" onmouseenter="showTip(event,3)" onmouseleave="hideTip()">T1.2</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(4)">T1.3<button class="rdel" onclick="event.stopPropagation();qd(4)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(4)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Analysis of Legal and Ethical Barriers">Analysis of Legal and Ethical Barriers</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:180px;width:510px;background:rgba(76,168,232,.25);border:1.5px solid #4CA8E8;color:#C8E6FF" onclick="oe(4)" onmouseenter="showTip(event,4)" onmouseleave="hideTip()">T1.3</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(5)">D1.1<button class="rdel" onclick="event.stopPropagation();qd(5)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(5)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Comprehensive literature review and framework development">Comprehensive literature review and framework development</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:180px;width:330px;background:rgba(76,168,232,.25);border:1.5px solid #4CA8E8;color:#C8E6FF" onclick="oe(5)" onmouseenter="showTip(event,5)" onmouseleave="hideTip()">D1.1</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(6)">D1.2<button class="rdel" onclick="event.stopPropagation();qd(6)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(6)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Article(s) describing stakeholder perspectives">Article(s) describing stakeholder perspectives</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:540px;width:330px;background:rgba(76,168,232,.25);border:1.5px solid #4CA8E8;color:#C8E6FF" onclick="oe(6)" onmouseenter="showTip(event,6)" onmouseleave="hideTip()">D1.2</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(7)">D1.3<button class="rdel" onclick="event.stopPropagation();qd(7)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(7)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Article(s) describing comparative regulatory analysis">Article(s) describing comparative regulatory analysis</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:720px;width:330px;background:rgba(76,168,232,.25);border:1.5px solid #4CA8E8;color:#C8E6FF" onclick="oe(7)" onmouseenter="showTip(event,7)" onmouseleave="hideTip()">D1.3</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(8)">M1.1<button class="rdel" onclick="event.stopPropagation();qd(8)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(8)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="ELSA Expert Symposium">ELSA Expert Symposium</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:360px;width:150px;background:rgba(76,168,232,.25);border:1.5px solid #4CA8E8;color:#C8E6FF" onclick="oe(8)" onmouseenter="showTip(event,8)" onmouseleave="hideTip()">M1.1</div>
+        </td>
+      </tr><tr class="wpr" style="background:rgba(60,201,138,.07)">
+      <td class="ci tci" style="background:rgba(60,201,138,.07);border-left:3px solid #3CC98A"></td>
+      <td class="cn" style="background:rgba(60,201,138,.07);color:#3CC98A;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:0 8px;white-space:nowrap">WP2 · Transdisciplinary Network to Co-Create Solutions</td>
+      <td colspan="20" style="background:rgba(60,201,138,.07);position:relative">
+        <div class="tday" style="left:180px;opacity:.4"></div>
+      </td>
+    </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(9)"><button class="rdel" onclick="event.stopPropagation();qd(9)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(9)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Postdoc Social AI – Wing Man – 0.3 FTE for 36 months">Postdoc Social AI – Wing Man – 0.3 FTE for 36 months</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:180px;width:870px;background:rgba(60,201,138,.25);border:1.5px solid #3CC98A;color:#B0F0D8" onclick="oe(9)" onmouseenter="showTip(event,9)" onmouseleave="hideTip()"></div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(10)"><button class="rdel" onclick="event.stopPropagation();qd(10)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(10)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Community/Comms officer – Floor Bennenbroek – 0.10 FTE for 60 months">Community/Comms officer – Floor Bennenbroek – 0.10 FTE for 60 months</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:1770px;background:rgba(60,201,138,.25);border:1.5px solid #3CC98A;color:#B0F0D8" onclick="oe(10)" onmouseenter="showTip(event,10)" onmouseleave="hideTip()"></div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(11)">T2.1<button class="rdel" onclick="event.stopPropagation();qd(11)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(11)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Stakeholder Mapping and Network Formation">Stakeholder Mapping and Network Formation</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:330px;background:rgba(60,201,138,.25);border:1.5px solid #3CC98A;color:#B0F0D8" onclick="oe(11)" onmouseenter="showTip(event,11)" onmouseleave="hideTip()">T2.1</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(12)">T2.2<button class="rdel" onclick="event.stopPropagation();qd(12)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(12)">
+          <div class="nw"><span class="tog" onclick="event.stopPropagation();tog(12)">−</span><span class="ntxt" title="Organising Collaborative Sessions">Organising Collaborative Sessions</span><span class="nbg">5</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:120px;width:1500px;background:rgba(60,201,138,.25);border:1.5px solid #3CC98A;color:#B0F0D8" onclick="oe(12)" onmouseenter="showTip(event,12)" onmouseleave="hideTip()">T2.2</div>
+        </td>
+      </tr><tr class="str">
+            <td class="ci sci" onclick="oes(12,0)">↳<button class="rdel-s" onclick="event.stopPropagation();qds(12,0)">×</button></td>
+            <td class="cn scn" onclick="oes(12,0)">
+              <div style="display:flex;align-items:center"><span class="scon"></span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0" title="Collaborative Session 1">Collaborative Session 1</span></div>
+            </td>
+            <td class="scb" colspan="20" style="position:relative">
+              <div class="tday" style="left:180px"></div>
+              <div class="sbar" style="left:120px;width:60px;background:rgba(60,201,138,.25);border:1px solid #3CC98A;color:#B0F0D8" onclick="oes(12,0)" onmouseenter="showStip(event,12,0)" onmouseleave="hideTip()"></div>
+            </td>
+          </tr><tr class="str">
+            <td class="ci sci" onclick="oes(12,1)">↳<button class="rdel-s" onclick="event.stopPropagation();qds(12,1)">×</button></td>
+            <td class="cn scn" onclick="oes(12,1)">
+              <div style="display:flex;align-items:center"><span class="scon"></span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0" title="Collaborative Session 2">Collaborative Session 2</span></div>
+            </td>
+            <td class="scb" colspan="20" style="position:relative">
+              <div class="tday" style="left:180px"></div>
+              <div class="sbar" style="left:480px;width:60px;background:rgba(60,201,138,.25);border:1px solid #3CC98A;color:#B0F0D8" onclick="oes(12,1)" onmouseenter="showStip(event,12,1)" onmouseleave="hideTip()"></div>
+            </td>
+          </tr><tr class="str">
+            <td class="ci sci" onclick="oes(12,2)">↳<button class="rdel-s" onclick="event.stopPropagation();qds(12,2)">×</button></td>
+            <td class="cn scn" onclick="oes(12,2)">
+              <div style="display:flex;align-items:center"><span class="scon"></span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0" title="Collaborative Session 3">Collaborative Session 3</span></div>
+            </td>
+            <td class="scb" colspan="20" style="position:relative">
+              <div class="tday" style="left:180px"></div>
+              <div class="sbar" style="left:840px;width:60px;background:rgba(60,201,138,.25);border:1px solid #3CC98A;color:#B0F0D8" onclick="oes(12,2)" onmouseenter="showStip(event,12,2)" onmouseleave="hideTip()"></div>
+            </td>
+          </tr><tr class="str">
+            <td class="ci sci" onclick="oes(12,3)">↳<button class="rdel-s" onclick="event.stopPropagation();qds(12,3)">×</button></td>
+            <td class="cn scn" onclick="oes(12,3)">
+              <div style="display:flex;align-items:center"><span class="scon"></span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0" title="Collaborative Session 4">Collaborative Session 4</span></div>
+            </td>
+            <td class="scb" colspan="20" style="position:relative">
+              <div class="tday" style="left:180px"></div>
+              <div class="sbar" style="left:1200px;width:60px;background:rgba(60,201,138,.25);border:1px solid #3CC98A;color:#B0F0D8" onclick="oes(12,3)" onmouseenter="showStip(event,12,3)" onmouseleave="hideTip()"></div>
+            </td>
+          </tr><tr class="str">
+            <td class="ci sci" onclick="oes(12,4)">↳<button class="rdel-s" onclick="event.stopPropagation();qds(12,4)">×</button></td>
+            <td class="cn scn" onclick="oes(12,4)">
+              <div style="display:flex;align-items:center"><span class="scon"></span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0" title="Collaborative Session 5">Collaborative Session 5</span></div>
+            </td>
+            <td class="scb" colspan="20" style="position:relative">
+              <div class="tday" style="left:180px"></div>
+              <div class="sbar" style="left:1560px;width:60px;background:rgba(60,201,138,.25);border:1px solid #3CC98A;color:#B0F0D8" onclick="oes(12,4)" onmouseenter="showStip(event,12,4)" onmouseleave="hideTip()"></div>
+            </td>
+          </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(13)">T2.3<button class="rdel" onclick="event.stopPropagation();qd(13)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(13)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Social analyses of health equity concerns in use cases">Social analyses of health equity concerns in use cases</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:360px;width:690px;background:rgba(60,201,138,.25);border:1.5px solid #3CC98A;color:#B0F0D8" onclick="oe(13)" onmouseenter="showTip(event,13)" onmouseleave="hideTip()">T2.3</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(14)">T2.4<button class="rdel" onclick="event.stopPropagation();qd(14)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(14)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Liaise and share findings with larger AINED community">Liaise and share findings with larger AINED community</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:1770px;background:rgba(60,201,138,.25);border:1.5px solid #3CC98A;color:#B0F0D8" onclick="oe(14)" onmouseenter="showTip(event,14)" onmouseleave="hideTip()">T2.4</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(15)">D2.1<button class="rdel" onclick="event.stopPropagation();qd(15)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(15)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Initial Network Formation">Initial Network Formation</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:180px;width:150px;background:rgba(60,201,138,.25);border:1.5px solid #3CC98A;color:#B0F0D8" onclick="oe(15)" onmouseenter="showTip(event,15)" onmouseleave="hideTip()">D2.1</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(16)">D2.2<button class="rdel" onclick="event.stopPropagation();qd(16)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(16)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Summary of Collaboration Sessions and Generated Insights">Summary of Collaboration Sessions and Generated Insights</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:360px;width:690px;background:rgba(60,201,138,.25);border:1.5px solid #3CC98A;color:#B0F0D8" onclick="oe(16)" onmouseenter="showTip(event,16)" onmouseleave="hideTip()">D2.2</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(17)">D2.3<button class="rdel" onclick="event.stopPropagation();qd(17)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(17)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Social analyses paper of health equity concerns and solutions">Social analyses paper of health equity concerns and solutions</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:720px;width:510px;background:rgba(60,201,138,.25);border:1.5px solid #3CC98A;color:#B0F0D8" onclick="oe(17)" onmouseenter="showTip(event,17)" onmouseleave="hideTip()">D2.3</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(18)">M2.1<button class="rdel" onclick="event.stopPropagation();qd(18)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(18)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="ELSA Lab AI for Health Equity Community Conference I">ELSA Lab AI for Health Equity Community Conference I</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:540px;width:150px;background:rgba(60,201,138,.25);border:1.5px solid #3CC98A;color:#B0F0D8" onclick="oe(18)" onmouseenter="showTip(event,18)" onmouseleave="hideTip()">M2.1</div>
+        </td>
+      </tr><tr class="wpr" style="background:rgba(245,166,35,.07)">
+      <td class="ci tci" style="background:rgba(245,166,35,.07);border-left:3px solid #F5A623"></td>
+      <td class="cn" style="background:rgba(245,166,35,.07);color:#F5A623;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:0 8px;white-space:nowrap">WP3 · Open Living Lab AI for Health Equity</td>
+      <td colspan="20" style="background:rgba(245,166,35,.07);position:relative">
+        <div class="tday" style="left:180px;opacity:.4"></div>
+      </td>
+    </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(19)"><button class="rdel" onclick="event.stopPropagation();qd(19)">×</button></td>
+        <td class="cn tcn" style="font-style:italic;color:var(--t2)" onclick="oe(19)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="ITSLanguage (use case 1; in-kind contributions)">ITSLanguage (use case 1; in-kind contributions)</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:1050px;background:rgba(245,166,35,.07);border:1.5px dashed #F5A623;color:#FFE0A0;opacity:.6" onclick="oe(19)" onmouseenter="showTip(event,19)" onmouseleave="hideTip()"></div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(20)"><button class="rdel" onclick="event.stopPropagation();qd(20)">×</button></td>
+        <td class="cn tcn" style="font-style:italic;color:var(--t2)" onclick="oe(20)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Syntho (use case 2; in-kind contributions)">Syntho (use case 2; in-kind contributions)</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:1050px;background:rgba(245,166,35,.07);border:1.5px dashed #F5A623;color:#FFE0A0;opacity:.6" onclick="oe(20)" onmouseenter="showTip(event,20)" onmouseleave="hideTip()"></div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(21)"><button class="rdel" onclick="event.stopPropagation();qd(21)">×</button></td>
+        <td class="cn tcn" style="font-style:italic;color:var(--t2)" onclick="oe(21)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Postdoc AI for Low Literacy – 0.5 FTE for 36 months">Postdoc AI for Low Literacy – 0.5 FTE for 36 months</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:1050px;background:rgba(245,166,35,.07);border:1.5px dashed #F5A623;color:#FFE0A0;opacity:.6" onclick="oe(21)" onmouseenter="showTip(event,21)" onmouseleave="hideTip()"></div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(22)">T3.1<button class="rdel" onclick="event.stopPropagation();qd(22)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(22)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Map and create method for identifying equity risks and barriers">Map and create method for identifying equity risks and barriers</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:360px;width:330px;background:rgba(245,166,35,.25);border:1.5px solid #F5A623;color:#FFE0A0" onclick="oe(22)" onmouseenter="showTip(event,22)" onmouseleave="hideTip()">T3.1</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(23)">T3.2<button class="rdel" onclick="event.stopPropagation();qd(23)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(23)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Define and experiment with equity and regulatory guidelines">Define and experiment with equity and regulatory guidelines</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:360px;width:1050px;background:rgba(245,166,35,.25);border:1.5px solid #F5A623;color:#FFE0A0" onclick="oe(23)" onmouseenter="showTip(event,23)" onmouseleave="hideTip()">T3.2</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(24)">T3.3<button class="rdel" onclick="event.stopPropagation();qd(24)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(24)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Develop guidelines and explanatories">Develop guidelines and explanatories</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:720px;width:1050px;background:rgba(245,166,35,.25);border:1.5px solid #F5A623;color:#FFE0A0" onclick="oe(24)" onmouseenter="showTip(event,24)" onmouseleave="hideTip()">T3.3</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(25)">D3.1<button class="rdel" onclick="event.stopPropagation();qd(25)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(25)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Publication on co-creation method for identifying health equity risks">Publication on co-creation method for identifying health equity risks</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:720px;width:330px;background:rgba(245,166,35,.25);border:1.5px solid #F5A623;color:#FFE0A0" onclick="oe(25)" onmouseenter="showTip(event,25)" onmouseleave="hideTip()">D3.1</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(26)">D3.2<button class="rdel" onclick="event.stopPropagation();qd(26)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(26)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Explainer and guidelines for developers on equitable AI implementation">Explainer and guidelines for developers on equitable AI implementation</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:720px;width:690px;background:rgba(245,166,35,.25);border:1.5px solid #F5A623;color:#FFE0A0" onclick="oe(26)" onmouseenter="showTip(event,26)" onmouseleave="hideTip()">D3.2</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(27)">D3.3<button class="rdel" onclick="event.stopPropagation();qd(27)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(27)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Interdisciplinary publication on implementing equity in AI regimes">Interdisciplinary publication on implementing equity in AI regimes</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1080px;width:330px;background:rgba(245,166,35,.25);border:1.5px solid #F5A623;color:#FFE0A0" onclick="oe(27)" onmouseenter="showTip(event,27)" onmouseleave="hideTip()">D3.3</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(28)">M3.1<button class="rdel" onclick="event.stopPropagation();qd(28)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(28)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Introduce/showcase use cases to the community">Introduce/showcase use cases to the community</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:360px;width:330px;background:rgba(245,166,35,.25);border:1.5px solid #F5A623;color:#FFE0A0" onclick="oe(28)" onmouseenter="showTip(event,28)" onmouseleave="hideTip()">M3.1</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(29)">M3.2<button class="rdel" onclick="event.stopPropagation();qd(29)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(29)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Present guidelines and explanatory materials in AINed meetings">Present guidelines and explanatory materials in AINed meetings</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1080px;width:330px;background:rgba(245,166,35,.25);border:1.5px solid #F5A623;color:#FFE0A0" onclick="oe(29)" onmouseenter="showTip(event,29)" onmouseleave="hideTip()">M3.2</div>
+        </td>
+      </tr><tr class="wpr" style="background:rgba(224,84,158,.07)">
+      <td class="ci tci" style="background:rgba(224,84,158,.07);border-left:3px solid #E0549E"></td>
+      <td class="cn" style="background:rgba(224,84,158,.07);color:#E0549E;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:0 8px;white-space:nowrap">WP4 · Dissemination, Knowledge Sharing &amp; Scaling Up</td>
+      <td colspan="20" style="background:rgba(224,84,158,.07);position:relative">
+        <div class="tday" style="left:180px;opacity:.4"></div>
+      </td>
+    </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(30)"><button class="rdel" onclick="event.stopPropagation();qd(30)">×</button></td>
+        <td class="cn tcn" style="font-style:italic;color:var(--t2)" onclick="oe(30)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Development Officer – 0.25 FTE for 24 months">Development Officer – 0.25 FTE for 24 months</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1080px;width:690px;background:rgba(224,84,158,.07);border:1.5px dashed #E0549E;color:#FFB8DC;opacity:.6" onclick="oe(30)" onmouseenter="showTip(event,30)" onmouseleave="hideTip()"></div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(31)"><button class="rdel" onclick="event.stopPropagation();qd(31)">×</button></td>
+        <td class="cn tcn" style="font-style:italic;color:var(--t2)" onclick="oe(31)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Postdoc (Law) – 0.6 FTE for 24 months">Postdoc (Law) – 0.6 FTE for 24 months</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1080px;width:690px;background:rgba(224,84,158,.07);border:1.5px dashed #E0549E;color:#FFB8DC;opacity:.6" onclick="oe(31)" onmouseenter="showTip(event,31)" onmouseleave="hideTip()"></div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(32)">T4.1<button class="rdel" onclick="event.stopPropagation();qd(32)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(32)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Recommendations &amp; guidelines for policy officers and companies">Recommendations &amp; guidelines for policy officers and companies</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1080px;width:330px;background:rgba(224,84,158,.25);border:1.5px solid #E0549E;color:#FFB8DC" onclick="oe(32)" onmouseenter="showTip(event,32)" onmouseleave="hideTip()">T4.1</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(33)">T4.2<button class="rdel" onclick="event.stopPropagation();qd(33)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(33)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Public engagement and communication">Public engagement and communication</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1080px;width:690px;background:rgba(224,84,158,.25);border:1.5px solid #E0549E;color:#FFB8DC" onclick="oe(33)" onmouseenter="showTip(event,33)" onmouseleave="hideTip()">T4.2</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(34)">T4.3<button class="rdel" onclick="event.stopPropagation();qd(34)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(34)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Strategy for scaling &amp; business development">Strategy for scaling &amp; business development</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1080px;width:690px;background:rgba(224,84,158,.25);border:1.5px solid #E0549E;color:#FFB8DC" onclick="oe(34)" onmouseenter="showTip(event,34)" onmouseleave="hideTip()">T4.3</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(35)">D4.1<button class="rdel" onclick="event.stopPropagation();qd(35)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(35)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Recommendations on equitable implementation of medical AI">Recommendations on equitable implementation of medical AI</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1260px;width:330px;background:rgba(224,84,158,.25);border:1.5px solid #E0549E;color:#FFB8DC" onclick="oe(35)" onmouseenter="showTip(event,35)" onmouseleave="hideTip()">D4.1</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(36)">D4.2<button class="rdel" onclick="event.stopPropagation();qd(36)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(36)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Article(s) on legal and ethical synthesis on legal implementation">Article(s) on legal and ethical synthesis on legal implementation</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1260px;width:330px;background:rgba(224,84,158,.25);border:1.5px solid #E0549E;color:#FFB8DC" onclick="oe(36)" onmouseenter="showTip(event,36)" onmouseleave="hideTip()">D4.2</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(37)">D4.3<button class="rdel" onclick="event.stopPropagation();qd(37)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(37)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Project scaling strategy and funding application">Project scaling strategy and funding application</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1440px;width:330px;background:rgba(224,84,158,.25);border:1.5px solid #E0549E;color:#FFB8DC" onclick="oe(37)" onmouseenter="showTip(event,37)" onmouseleave="hideTip()">D4.3</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(38)">M4.1<button class="rdel" onclick="event.stopPropagation();qd(38)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(38)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="AI health equity community conference II">AI health equity community conference II</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1260px;width:150px;background:rgba(224,84,158,.25);border:1.5px solid #E0549E;color:#FFB8DC" onclick="oe(38)" onmouseenter="showTip(event,38)" onmouseleave="hideTip()">M4.1</div>
+        </td>
+      </tr><tr class="wpr" style="background:rgba(155,130,247,.07)">
+      <td class="ci tci" style="background:rgba(155,130,247,.07);border-left:3px solid #9B82F7"></td>
+      <td class="cn" style="background:rgba(155,130,247,.07);color:#9B82F7;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:0 8px;white-space:nowrap">WP5 · Project Management</td>
+      <td colspan="20" style="background:rgba(155,130,247,.07);position:relative">
+        <div class="tday" style="left:180px;opacity:.4"></div>
+      </td>
+    </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(39)"><button class="rdel" onclick="event.stopPropagation();qd(39)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(39)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Project manager – part-time for 60 months - Dachi Shanidze">Project manager – part-time for 60 months - Dachi Shanidze</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:1770px;background:rgba(155,130,247,.25);border:1.5px solid #9B82F7;color:#D8CCFF" onclick="oe(39)" onmouseenter="showTip(event,39)" onmouseleave="hideTip()"></div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(40)">T5.1<button class="rdel" onclick="event.stopPropagation();qd(40)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(40)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Project Coordination">Project Coordination</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:1770px;background:rgba(155,130,247,.25);border:1.5px solid #9B82F7;color:#D8CCFF" onclick="oe(40)" onmouseenter="showTip(event,40)" onmouseleave="hideTip()">T5.1</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(41)">T5.2<button class="rdel" onclick="event.stopPropagation();qd(41)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(41)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Financial and Data Management and Reporting">Financial and Data Management and Reporting</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:1770px;background:rgba(155,130,247,.25);border:1.5px solid #9B82F7;color:#D8CCFF" onclick="oe(41)" onmouseenter="showTip(event,41)" onmouseleave="hideTip()">T5.2</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(42)">T5.3<button class="rdel" onclick="event.stopPropagation();qd(42)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(42)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Risk Management and Sustainability">Risk Management and Sustainability</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:1770px;background:rgba(155,130,247,.25);border:1.5px solid #9B82F7;color:#D8CCFF" onclick="oe(42)" onmouseenter="showTip(event,42)" onmouseleave="hideTip()">T5.3</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(43)">D5.1<button class="rdel" onclick="event.stopPropagation();qd(43)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(43)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Project management handbook">Project management handbook</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:150px;background:rgba(155,130,247,.25);border:1.5px solid #9B82F7;color:#D8CCFF" onclick="oe(43)" onmouseenter="showTip(event,43)" onmouseleave="hideTip()">D5.1</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(44)">D5.2<button class="rdel" onclick="event.stopPropagation();qd(44)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(44)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Regular progress reports, including annual risk assessments">Regular progress reports, including annual risk assessments</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:1770px;background:rgba(155,130,247,.25);border:1.5px solid #9B82F7;color:#D8CCFF" onclick="oe(44)" onmouseenter="showTip(event,44)" onmouseleave="hideTip()">D5.2</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(45)">D5.3<button class="rdel" onclick="event.stopPropagation();qd(45)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(45)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Final project report">Final project report</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1440px;width:330px;background:rgba(155,130,247,.25);border:1.5px solid #9B82F7;color:#D8CCFF" onclick="oe(45)" onmouseenter="showTip(event,45)" onmouseleave="hideTip()">D5.3</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(46)">M5.1<button class="rdel" onclick="event.stopPropagation();qd(46)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(46)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Kick-off meeting and management structure established">Kick-off meeting and management structure established</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:0px;width:60px;background:rgba(155,130,247,.25);border:1.5px solid #9B82F7;color:#D8CCFF" onclick="oe(46)" onmouseenter="showTip(event,46)" onmouseleave="hideTip()"></div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(47)">M5.2<button class="rdel" onclick="event.stopPropagation();qd(47)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(47)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Mid-term review and meeting to address needed adjustments">Mid-term review and meeting to address needed adjustments</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:720px;width:150px;background:rgba(155,130,247,.25);border:1.5px solid #9B82F7;color:#D8CCFF" onclick="oe(47)" onmouseenter="showTip(event,47)" onmouseleave="hideTip()">M5.2</div>
+        </td>
+      </tr><tr class="tr">
+        <td class="ci tci" onclick="oe(48)">M5.3<button class="rdel" onclick="event.stopPropagation();qd(48)">×</button></td>
+        <td class="cn tcn" style="" onclick="oe(48)">
+          <div class="nw"><span style="display:inline-block;width:15px;flex-shrink:0"></span><span class="ntxt" title="Final review and concluding meeting">Final review and concluding meeting</span></div>
+        </td>
+        <td class="tcb" colspan="20" style="position:relative">
+          <div class="qdiv" style="left:360px"></div><div class="qdiv" style="left:720px"></div><div class="qdiv" style="left:1080px"></div><div class="qdiv" style="left:1440px"></div>
+          <div class="tday" style="left:180px"></div>
+          <div class="bar" style="left:1620px;width:150px;background:rgba(155,130,247,.25);border:1.5px solid #9B82F7;color:#D8CCFF" onclick="oe(48)" onmouseenter="showTip(event,48)" onmouseleave="hideTip()">M5.3</div>
+        </td>
+      </tr></tbody></table></div></div>
 
 <!-- EDIT PANEL -->
 <div class="ov" id="ov1" onclick="mc1(event)">
   <div class="panel">
     <div class="ptop">
-      <div><h2 id="p1t">Edit row</h2><span class="pbdg" id="p1b"></span></div>
+      <div><h2 id="p1t">Edit row</h2><span class="pbdg" id="p1b">Project manager – part…</span></div>
       <button class="pcls" onclick="c1()">×</button>
     </div>
     <div class="pbody">
       <div class="fg">
-        <div class="f full"><label>Name</label><input id="p1name" type="text"/></div>
-        <div class="f"><label>ID</label><input id="p1id" type="text" placeholder="T1.1"/></div>
+        <div class="f full"><label>Name</label><input id="p1name" type="text"></div>
+        <div class="f"><label>ID</label><input id="p1id" type="text" placeholder="T1.1"></div>
         <div class="f"><label>Work Package</label>
           <select id="p1wp"><option>WP1</option><option>WP2</option><option>WP3</option><option>WP4</option><option>WP5</option></select>
         </div>
-        <div class="f full"><label>Assignee</label><input id="p1who" type="text"/></div>
-        <div class="f"><label>Start</label><input id="p1s" type="date"/></div>
-        <div class="f"><label>End</label><input id="p1e" type="date"/></div>
+        <div class="f full"><label>Assignee</label><input id="p1who" type="text"></div>
+        <div class="f"><label>Start</label><input id="p1s" type="date"></div>
+        <div class="f"><label>End</label><input id="p1e" type="date"></div>
         <div class="f full"><label>Status</label>
           <select id="p1st"><option>Completed</option><option>In Progress</option><option>Not Started</option></select>
         </div>
       </div>
     </div>
     <div class="pfoot">
-      <button class="bdel" id="p1del" onclick="delRow()">Delete</button>
-      <button class="bsub" id="p1sub" onclick="addSub()">+ Subtask</button>
+      <button class="bdel" id="p1del" onclick="delRow()" style="display: inline-block;">Delete</button>
+      <button class="bsub" id="p1sub" onclick="addSub()" style="display: inline-block;">+ Subtask</button>
       <button class="bcancel" onclick="c1()">Cancel</button>
       <button class="bsave" onclick="sv1()">Save</button>
     </div>
@@ -478,14 +1066,14 @@ tr.str:hover .rdel-s{opacity:1}
     </div>
     <div class="pbody">
       <div class="fg">
-        <div class="f full"><label>Subtask name</label><input id="p2name" type="text" placeholder="e.g. Session 1 – workshop"/></div>
-        <div class="f full"><label>Assignee</label><input id="p2who" type="text"/></div>
-        <div class="f"><label>Start</label><input id="p2s" type="date"/></div>
-        <div class="f"><label>End</label><input id="p2e" type="date"/></div>
+        <div class="f full"><label>Subtask name</label><input id="p2name" type="text" placeholder="e.g. Session 1 – workshop"></div>
+        <div class="f full"><label>Assignee</label><input id="p2who" type="text"></div>
+        <div class="f"><label>Start</label><input id="p2s" type="date"></div>
+        <div class="f"><label>End</label><input id="p2e" type="date"></div>
         <div class="f full"><label>Status</label>
-          <select id="p2st"><option>Completed</option><option>In Progress</option><option selected>Not Started</option></select>
+          <select id="p2st"><option>Completed</option><option>In Progress</option><option selected="">Not Started</option></select>
         </div>
-        <div class="f full"><label>Notes (optional)</label><input id="p2n" type="text" placeholder="Any extra context…"/></div>
+        <div class="f full"><label>Notes (optional)</label><input id="p2n" type="text" placeholder="Any extra context…"></div>
       </div>
     </div>
     <div class="pfoot">
@@ -496,7 +1084,10 @@ tr.str:hover .rdel-s{opacity:1}
   </div>
 </div>
 
-<div class="tip" id="tip"></div>
+<div class="tip" id="tip" style="display: none; left: 1123px; top: 359px;"><strong>T1.3 · Analysis of Legal and Ethical Barriers</strong>
+    <div class="tm">1 Jun 2026 → 30 Nov 2027</div>
+    <div class="tm">Postdoc</div>
+    <span class="tbg" style="background:rgba(76,168,232,.15);color:#93C5FD;border:1px solid rgba(76,168,232,.4)">In Progress</span></div>
 
 <script>
 /* ── CONFIG ── */
@@ -550,72 +1141,71 @@ const STS={
 };
 
 let DATA=[
-  /* WP1 */
-  {wp:'WP1',id:'',  name:'Postdoc (law) – 0.6 FTE for 24 months',who:'Postdoc (law)',start:yq(1,1),end:yqe(2,4),status:'In Progress',_s:true},
-  {wp:'WP1',id:'',  name:'Postdoc (ethics) – 0.25 FTE for 24 months',who:'Postdoc (ethics)',start:yq(1,1),end:yqe(2,4),status:'In Progress',_s:true},
-  {wp:'WP1',id:'T1.1',name:'Literature review and Theoretical Framework Development',who:'Postdoc',start:yq(1,1),end:yqe(1,4),status:'Completed'},
-  {wp:'WP1',id:'T1.2',name:'Stakeholder Interviews',who:'Postdoc',start:yq(1,3),end:yqe(2,2),status:'In Progress'},
-  {wp:'WP1',id:'T1.3',name:'Analysis of Legal and Ethical Barriers',who:'Postdoc',start:yq(1,3),end:yqe(2,4),status:'In Progress'},
-  {wp:'WP1',id:'D1.1',name:'Comprehensive literature review and framework development',who:'Postdoc',start:yq(1,3),end:yqe(2,2),status:'In Progress'},
-  {wp:'WP1',id:'D1.2',name:'Article(s) describing stakeholder perspectives',who:'Postdoc',start:yq(2,3),end:yqe(3,2),status:'Not Started'},
-  {wp:'WP1',id:'D1.3',name:'Article(s) describing comparative regulatory analysis',who:'Postdoc',start:yq(3,1),end:yqe(3,4),status:'Not Started'},
-  {wp:'WP1',id:'M1.1',name:'ELSA Expert Symposium',who:'WP leader; PM',start:yq(2,1),end:yqe(2,2),status:'Not Started'},
-  /* WP2 */
-  {wp:'WP2',id:'',  name:'Postdoc Social AI – 0.3 FTE for 36 months',who:'Postdoc Social AI',start:yq(1,1),end:yqe(3,4),status:'In Progress',_s:true},
-  {wp:'WP2',id:'',  name:'Community/Comms officer – 0.10 FTE for 60 months',who:'Comms officer',start:yq(1,1),end:yqe(5,4),status:'Not Started',_s:true},
-  {wp:'WP2',id:'T2.1',name:'Stakeholder Mapping and Network Formation',who:'WP leader; Postdocs',start:yq(1,1),end:yqe(1,4),status:'Completed'},
+  {wp:'WP1',id:'',name:'Postdoc (law) – James Hazel – 0.6 FTE for 24 months',who:'James Hazel',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2027,10,30)),status:'Completed'},
+  {wp:'WP1',id:'',name:'Postdoc (ethics) – 0.25 FTE for 24 months',who:'Postdoc (ethics)',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2027,10,30)),status:'Completed'},
+  {wp:'WP1',id:'T1.1',name:'Literature review and Theoretical Framework Development',who:'Postdoc',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2026,10,30)),status:'Completed'},
+  {wp:'WP1',id:'T1.2',name:'Stakeholder Interviews',who:'Postdoc',start:new Date(Date.UTC(2026,5,1)),end:new Date(Date.UTC(2027,4,31)),status:'In Progress'},
+  {wp:'WP1',id:'T1.3',name:'Analysis of Legal and Ethical Barriers',who:'Postdoc',start:new Date(Date.UTC(2026,5,1)),end:new Date(Date.UTC(2027,10,30)),status:'In Progress'},
+  {wp:'WP1',id:'D1.1',name:'Comprehensive literature review and framework development',who:'Postdoc',start:new Date(Date.UTC(2026,5,1)),end:new Date(Date.UTC(2027,4,31)),status:'In Progress'},
+  {wp:'WP1',id:'D1.2',name:'Article(s) describing stakeholder perspectives',who:'Postdoc',start:new Date(Date.UTC(2027,5,1)),end:new Date(Date.UTC(2028,4,31)),status:'Not Started'},
+  {wp:'WP1',id:'D1.3',name:'Article(s) describing comparative regulatory analysis',who:'Postdoc',start:new Date(Date.UTC(2027,11,1)),end:new Date(Date.UTC(2028,10,30)),status:'Not Started'},
+  {wp:'WP1',id:'M1.1',name:'ELSA Expert Symposium',who:'WP leader; PM',start:new Date(Date.UTC(2026,11,1)),end:new Date(Date.UTC(2027,4,31)),status:'Not Started'},
+  {wp:'WP2',id:'',name:'Postdoc Social AI – Wing Man – 0.3 FTE for 36 months',who:'Wing Man',start:new Date(Date.UTC(2026,5,1)),end:new Date(Date.UTC(2028,10,30)),status:'Completed'},
+  {wp:'WP2',id:'',name:'Community/Comms officer – Floor Bennenbroek – 0.10 FTE for 60 months',who:'Floor Bennenbroek',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'Completed'},
+  {wp:'WP2',id:'T2.1',name:'Stakeholder Mapping and Network Formation',who:'WP leader; Postdocs',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2026,10,30)),status:'Completed'},
   {wp:'WP2',id:'T2.2',name:'Organising Collaborative Sessions',who:'WP leader; PM',start:new Date(Date.UTC(2026,3,1)),end:new Date(Date.UTC(2030,5,30)),status:'In Progress',subtasks:[
     {name:'Collaborative Session 1',who:'WP leader; PM',start:new Date(Date.UTC(2026,3,1)),end:new Date(Date.UTC(2026,5,30)),status:'Not Started',notes:'Q2 2026'},
     {name:'Collaborative Session 2',who:'WP leader; PM',start:new Date(Date.UTC(2027,3,1)),end:new Date(Date.UTC(2027,5,30)),status:'Not Started',notes:'Q2 2027'},
     {name:'Collaborative Session 3',who:'WP leader; PM',start:new Date(Date.UTC(2028,3,1)),end:new Date(Date.UTC(2028,5,30)),status:'Not Started',notes:'Q2 2028'},
     {name:'Collaborative Session 4',who:'WP leader; PM',start:new Date(Date.UTC(2029,3,1)),end:new Date(Date.UTC(2029,5,30)),status:'Not Started',notes:'Q2 2029'},
-    {name:'Collaborative Session 5',who:'WP leader; PM',start:new Date(Date.UTC(2030,3,1)),end:new Date(Date.UTC(2030,5,30)),status:'Not Started',notes:'Q2 2030'},
+    {name:'Collaborative Session 5',who:'WP leader; PM',start:new Date(Date.UTC(2030,3,1)),end:new Date(Date.UTC(2030,5,30)),status:'Not Started',notes:'Q2 2030'}
   ]},
-  {wp:'WP2',id:'T2.3',name:'Social analyses of health equity concerns in use cases',who:'WP leader; Postdocs',start:yq(2,1),end:yqe(3,4),status:'Not Started'},
-  {wp:'WP2',id:'T2.4',name:'Liaise and share findings with larger AINED community',who:'WP leader; Postdoc',start:yq(1,1),end:yqe(5,4),status:'Not Started'},
-  {wp:'WP2',id:'D2.1',name:'Initial Network Formation',who:'WP leader; Postdoc',start:yq(1,3),end:yqe(1,4),status:'Completed'},
-  {wp:'WP2',id:'D2.2',name:'Summary of Collaboration Sessions and Generated Insights',who:'WP leader; Postdoc',start:yq(2,1),end:yqe(3,4),status:'Not Started'},
-  {wp:'WP2',id:'D2.3',name:'Social analyses paper of health equity concerns and solutions',who:'Postdoc',start:yq(3,1),end:yqe(4,2),status:'Not Started'},
-  {wp:'WP2',id:'M2.1',name:'ELSA Lab AI for Health Equity Community Conference I',who:'WP leader; PM',start:yq(2,3),end:yqe(2,4),status:'Not Started'},
-  /* WP3 */
-  {wp:'WP3',id:'',  name:'ITSLanguage (use case 1; in-kind contributions)',who:'ITSLanguage',start:yq(1,1),end:yqe(3,4),status:'Not Started',_s:true},
-  {wp:'WP3',id:'',  name:'Syntho (use case 2; in-kind contributions)',who:'Syntho',start:yq(1,1),end:yqe(3,4),status:'Not Started',_s:true},
-  {wp:'WP3',id:'',  name:'Postdoc AI for Low Literacy – 0.5 FTE for 36 months',who:'Postdoc AI',start:yq(1,1),end:yqe(3,4),status:'Not Started',_s:true},
-  {wp:'WP3',id:'T3.1',name:'Map and create method for identifying equity risks and barriers',who:'WP leader; Postdocs',start:yq(2,1),end:yqe(2,4),status:'Not Started'},
-  {wp:'WP3',id:'T3.2',name:'Define and experiment with equity and regulatory guidelines',who:'WP leader; Postdocs',start:yq(2,1),end:yqe(4,4),status:'Not Started'},
-  {wp:'WP3',id:'T3.3',name:'Develop guidelines and explanatories',who:'WP leader; Postdocs',start:yq(3,1),end:yqe(5,4),status:'Not Started'},
-  {wp:'WP3',id:'D3.1',name:'Publication on co-creation method for identifying health equity risks',who:'WP leader; Postdocs',start:yq(3,1),end:yqe(3,4),status:'Not Started'},
-  {wp:'WP3',id:'D3.2',name:'Explainer and guidelines for developers on equitable AI implementation',who:'WP leader; Postdocs',start:yq(3,1),end:yqe(4,4),status:'Not Started'},
-  {wp:'WP3',id:'D3.3',name:'Interdisciplinary publication on implementing equity in AI regimes',who:'WP leader; Postdocs',start:yq(4,1),end:yqe(4,4),status:'Not Started'},
-  {wp:'WP3',id:'M3.1',name:'Introduce/showcase use cases to the community',who:'WP leader; PM',start:yq(2,1),end:yqe(2,4),status:'Not Started'},
-  {wp:'WP3',id:'M3.2',name:'Present guidelines and explanatory materials in AINed meetings',who:'WP leader; PM',start:yq(4,1),end:yqe(4,4),status:'Not Started'},
-  /* WP4 */
-  {wp:'WP4',id:'',  name:'Development Officer – 0.25 FTE for 24 months',who:'Dev Officer',start:yq(4,1),end:yqe(5,4),status:'Not Started',_s:true},
-  {wp:'WP4',id:'',  name:'Postdoc (Law) – 0.6 FTE for 24 months',who:'Postdoc (law)',start:yq(4,1),end:yqe(5,4),status:'Not Started',_s:true},
-  {wp:'WP4',id:'T4.1',name:'Recommendations & guidelines for policy officers and companies',who:'WP leader; Dev Officer',start:yq(4,1),end:yqe(4,4),status:'Not Started'},
-  {wp:'WP4',id:'T4.2',name:'Public engagement and communication',who:'WP leader; Dev Officer',start:yq(4,1),end:yqe(5,4),status:'Not Started'},
-  {wp:'WP4',id:'T4.3',name:'Strategy for scaling & business development',who:'WP leader; Dev Officer',start:yq(4,1),end:yqe(5,4),status:'Not Started'},
-  {wp:'WP4',id:'D4.1',name:'Recommendations on equitable implementation of medical AI',who:'WP leader; Dev Officer',start:yq(4,3),end:yqe(5,2),status:'Not Started'},
-  {wp:'WP4',id:'D4.2',name:'Article(s) on legal and ethical synthesis on legal implementation',who:'WP leader; Dev Officer',start:yq(4,3),end:yqe(5,2),status:'Not Started'},
-  {wp:'WP4',id:'D4.3',name:'Project scaling strategy and funding application',who:'WP leader; Dev Officer',start:yq(5,1),end:yqe(5,4),status:'Not Started'},
-  {wp:'WP4',id:'M4.1',name:'AI health equity community conference II',who:'WP leader; PM',start:yq(4,3),end:yqe(4,4),status:'Not Started'},
-  /* WP5 */
-  {wp:'WP5',id:'',  name:'Project manager – part-time for 60 months',who:'Project Manager',start:yq(1,1),end:yqe(5,4),status:'In Progress',_s:true},
-  {wp:'WP5',id:'T5.1',name:'Project Coordination',who:'WP Leader / PM',start:yq(1,1),end:yqe(5,4),status:'In Progress'},
-  {wp:'WP5',id:'T5.2',name:'Financial and Data Management and Reporting',who:'Project controller',start:yq(1,1),end:yqe(5,4),status:'In Progress'},
-  {wp:'WP5',id:'T5.3',name:'Risk Management and Sustainability',who:'WP Leader / PM',start:yq(1,1),end:yqe(5,4),status:'Not Started'},
-  {wp:'WP5',id:'D5.1',name:'Project management handbook',who:'WP Leader / PM',start:yq(1,1),end:yqe(1,2),status:'Completed'},
-  {wp:'WP5',id:'D5.2',name:'Regular progress reports, including annual risk assessments',who:'WP Leader / PM',start:yq(1,1),end:yqe(5,4),status:'In Progress'},
-  {wp:'WP5',id:'D5.3',name:'Final project report',who:'WP Leader / PM',start:yq(5,1),end:yqe(5,4),status:'Not Started'},
-  {wp:'WP5',id:'M5.1',name:'Kick-off meeting and management structure established',who:'Program Manager',start:yq(1,1),end:yqe(1,1),status:'Completed'},
-  {wp:'WP5',id:'M5.2',name:'Mid-term review and meeting to address needed adjustments',who:'WP Leader',start:yq(3,1),end:yqe(3,2),status:'Not Started'},
-  {wp:'WP5',id:'M5.3',name:'Final review and concluding meeting',who:'WP Leader / PM',start:yq(5,3),end:yqe(5,4),status:'Not Started'},
+  {wp:'WP2',id:'T2.3',name:'Social analyses of health equity concerns in use cases',who:'WP leader; Postdocs',start:new Date(Date.UTC(2026,11,1)),end:new Date(Date.UTC(2028,10,30)),status:'Not Started'},
+  {wp:'WP2',id:'T2.4',name:'Liaise and share findings with larger AINED community',who:'WP leader; Postdoc',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'Not Started'},
+  {wp:'WP2',id:'D2.1',name:'Initial Network Formation',who:'WP leader; Postdoc',start:new Date(Date.UTC(2026,5,1)),end:new Date(Date.UTC(2026,10,30)),status:'Completed'},
+  {wp:'WP2',id:'D2.2',name:'Summary of Collaboration Sessions and Generated Insights',who:'WP leader; Postdoc',start:new Date(Date.UTC(2026,11,1)),end:new Date(Date.UTC(2028,10,30)),status:'Not Started'},
+  {wp:'WP2',id:'D2.3',name:'Social analyses paper of health equity concerns and solutions',who:'Postdoc',start:new Date(Date.UTC(2027,11,1)),end:new Date(Date.UTC(2029,4,31)),status:'Not Started'},
+  {wp:'WP2',id:'M2.1',name:'ELSA Lab AI for Health Equity Community Conference I',who:'WP leader; PM',start:new Date(Date.UTC(2027,5,1)),end:new Date(Date.UTC(2027,10,30)),status:'Not Started'},
+  {wp:'WP3',id:'',name:'ITSLanguage (use case 1; in-kind contributions)',who:'ITSLanguage',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2028,10,30)),status:'Not Started',_s:true},
+  {wp:'WP3',id:'',name:'Syntho (use case 2; in-kind contributions)',who:'Syntho',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2028,10,30)),status:'Not Started',_s:true},
+  {wp:'WP3',id:'',name:'Postdoc AI for Low Literacy – 0.5 FTE for 36 months',who:'Postdoc AI',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2028,10,30)),status:'Not Started',_s:true},
+  {wp:'WP3',id:'T3.1',name:'Map and create method for identifying equity risks and barriers',who:'WP leader; Postdocs',start:new Date(Date.UTC(2026,11,1)),end:new Date(Date.UTC(2027,10,30)),status:'Not Started'},
+  {wp:'WP3',id:'T3.2',name:'Define and experiment with equity and regulatory guidelines',who:'WP leader; Postdocs',start:new Date(Date.UTC(2026,11,1)),end:new Date(Date.UTC(2029,10,30)),status:'Not Started'},
+  {wp:'WP3',id:'T3.3',name:'Develop guidelines and explanatories',who:'WP leader; Postdocs',start:new Date(Date.UTC(2027,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'Not Started'},
+  {wp:'WP3',id:'D3.1',name:'Publication on co-creation method for identifying health equity risks',who:'WP leader; Postdocs',start:new Date(Date.UTC(2027,11,1)),end:new Date(Date.UTC(2028,10,30)),status:'Not Started'},
+  {wp:'WP3',id:'D3.2',name:'Explainer and guidelines for developers on equitable AI implementation',who:'WP leader; Postdocs',start:new Date(Date.UTC(2027,11,1)),end:new Date(Date.UTC(2029,10,30)),status:'Not Started'},
+  {wp:'WP3',id:'D3.3',name:'Interdisciplinary publication on implementing equity in AI regimes',who:'WP leader; Postdocs',start:new Date(Date.UTC(2028,11,1)),end:new Date(Date.UTC(2029,10,30)),status:'Not Started'},
+  {wp:'WP3',id:'M3.1',name:'Introduce/showcase use cases to the community',who:'WP leader; PM',start:new Date(Date.UTC(2026,11,1)),end:new Date(Date.UTC(2027,10,30)),status:'Not Started'},
+  {wp:'WP3',id:'M3.2',name:'Present guidelines and explanatory materials in AINed meetings',who:'WP leader; PM',start:new Date(Date.UTC(2028,11,1)),end:new Date(Date.UTC(2029,10,30)),status:'Not Started'},
+  {wp:'WP4',id:'',name:'Development Officer – 0.25 FTE for 24 months',who:'Dev Officer',start:new Date(Date.UTC(2028,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'Not Started',_s:true},
+  {wp:'WP4',id:'',name:'Postdoc (Law) – 0.6 FTE for 24 months',who:'Postdoc (law)',start:new Date(Date.UTC(2028,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'Not Started',_s:true},
+  {wp:'WP4',id:'T4.1',name:'Recommendations & guidelines for policy officers and companies',who:'WP leader; Dev Officer',start:new Date(Date.UTC(2028,11,1)),end:new Date(Date.UTC(2029,10,30)),status:'Not Started'},
+  {wp:'WP4',id:'T4.2',name:'Public engagement and communication',who:'WP leader; Dev Officer',start:new Date(Date.UTC(2028,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'Not Started'},
+  {wp:'WP4',id:'T4.3',name:'Strategy for scaling & business development',who:'WP leader; Dev Officer',start:new Date(Date.UTC(2028,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'Not Started'},
+  {wp:'WP4',id:'D4.1',name:'Recommendations on equitable implementation of medical AI',who:'WP leader; Dev Officer',start:new Date(Date.UTC(2029,5,1)),end:new Date(Date.UTC(2030,4,31)),status:'Not Started'},
+  {wp:'WP4',id:'D4.2',name:'Article(s) on legal and ethical synthesis on legal implementation',who:'WP leader; Dev Officer',start:new Date(Date.UTC(2029,5,1)),end:new Date(Date.UTC(2030,4,31)),status:'Not Started'},
+  {wp:'WP4',id:'D4.3',name:'Project scaling strategy and funding application',who:'WP leader; Dev Officer',start:new Date(Date.UTC(2029,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'Not Started'},
+  {wp:'WP4',id:'M4.1',name:'AI health equity community conference II',who:'WP leader; PM',start:new Date(Date.UTC(2029,5,1)),end:new Date(Date.UTC(2029,10,30)),status:'Not Started'},
+  {wp:'WP5',id:'',name:'Project manager – part-time for 60 months - Dachi Shanidze',who:'Project Manager',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'Completed'},
+  {wp:'WP5',id:'T5.1',name:'Project Coordination',who:'WP Leader / PM',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'In Progress'},
+  {wp:'WP5',id:'T5.2',name:'Financial and Data Management and Reporting',who:'Project controller',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'In Progress'},
+  {wp:'WP5',id:'T5.3',name:'Risk Management and Sustainability',who:'WP Leader / PM',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'Not Started'},
+  {wp:'WP5',id:'D5.1',name:'Project management handbook',who:'WP Leader / PM',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2026,4,31)),status:'Completed'},
+  {wp:'WP5',id:'D5.2',name:'Regular progress reports, including annual risk assessments',who:'WP Leader / PM',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'In Progress'},
+  {wp:'WP5',id:'D5.3',name:'Final project report',who:'WP Leader / PM',start:new Date(Date.UTC(2029,11,1)),end:new Date(Date.UTC(2030,10,30)),status:'Not Started'},
+  {wp:'WP5',id:'M5.1',name:'Kick-off meeting and management structure established',who:'Program Manager',start:new Date(Date.UTC(2025,11,1)),end:new Date(Date.UTC(2026,1,28)),status:'Completed'},
+  {wp:'WP5',id:'M5.2',name:'Mid-term review and meeting to address needed adjustments',who:'WP Leader',start:new Date(Date.UTC(2027,11,1)),end:new Date(Date.UTC(2028,4,31)),status:'Not Started'},
+  {wp:'WP5',id:'M5.3',name:'Final review and concluding meeting',who:'WP Leader / PM',start:new Date(Date.UTC(2030,5,1)),end:new Date(Date.UTC(2030,10,30)),status:'Not Started'}
 ];
 
 /* ── PERSISTENCE (localStorage) ──
    Edits are saved to this browser so they survive page refresh.
    Note: storage is per-browser/per-device and not shared with others. */
 const STORE_KEY='elsa_lab_gantt_v1';
+/* Version stamp of the baked-in DATA. exportHTML() updates this.
+   On load, if the file's baked version is newer than what's stored,
+   the file's data wins (so re-exported/GitHub files always show their own data). */
+const DATA_VERSION='v1780923440494';
 
 function serialize(arr){
   return JSON.stringify(arr.map(r=>({
@@ -632,17 +1222,20 @@ function reviveRow(r){
   };
 }
 function saveData(){
-  try{ localStorage.setItem(STORE_KEY, serialize(DATA)); }
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify({v:DATA_VERSION,data:JSON.parse(serialize(DATA))})); }
   catch(e){ /* storage unavailable — ignore */ }
 }
 function loadData(){
   try{
     const raw=localStorage.getItem(STORE_KEY);
     if(raw){
-      const parsed=JSON.parse(raw);
-      if(Array.isArray(parsed)&&parsed.length){ DATA=parsed.map(reviveRow); }
+      const obj=JSON.parse(raw);
+      /* only use stored edits if they belong to this same baked version */
+      if(obj && obj.v===DATA_VERSION && Array.isArray(obj.data) && obj.data.length){
+        DATA=obj.data.map(reviveRow);
+      }
     }
-  }catch(e){ /* corrupt/unavailable — keep defaults */ }
+  }catch(e){ /* corrupt/unavailable — keep baked-in defaults */ }
 }
 function resetData(){
   if(confirm('Reset to the original plan? This erases all your saved edits in this browser.')){
@@ -958,6 +1551,44 @@ function exportCSV(){
   a.download='elsa_lab_gantt.csv';a.click();
 }
 
+/* ── EXPORT AS HTML (bakes current edits into a fresh file) ── */
+function exportHTML(){
+  /* serialize current DATA into a JS array literal that recreates Date objects */
+  function dlit(d){
+    if(!d) return 'null';
+    return `new Date(Date.UTC(${d.getUTCFullYear()},${d.getUTCMonth()},${d.getUTCDate()}))`;
+  }
+  function esc(s){ return String(s==null?'':s).replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+  function rowLit(r,indent){
+    let s=`${indent}{wp:'${esc(r.wp)}',id:'${esc(r.id)}',name:'${esc(r.name)}',who:'${esc(r.who)}',start:${dlit(r.start)},end:${dlit(r.end)},status:'${esc(r.status)}'`;
+    if(r._s) s+=`,_s:true`;
+    if(r.subtasks&&r.subtasks.length){
+      s+=`,subtasks:[\n`;
+      s+=r.subtasks.map(st=>`${indent}  {name:'${esc(st.name)}',who:'${esc(st.who)}',start:${dlit(st.start)},end:${dlit(st.end)},status:'${esc(st.status)}',notes:'${esc(st.notes)}'}`).join(',\n');
+      s+=`\n${indent}]`;
+    }
+    s+=`}`;
+    return s;
+  }
+  const dataLiteral = 'let DATA=[\n' + DATA.map(r=>rowLit(r,'  ')).join(',\n') + '\n];';
+
+  /* grab the full current page HTML and replace the DATA block + version stamp */
+  let src = document.documentElement.outerHTML;
+  src = '<!DOCTYPE html>\n' + src;
+  /* replace the existing "let DATA=[ ... ];" block */
+  src = src.replace(/let DATA=\[[\s\S]*?\n\];/, dataLiteral);
+  /* stamp a fresh version so the exported file uses its own baked-in data */
+  const stamp = 'v'+Date.now();
+  src = src.replace(/const DATA_VERSION='[^']*';/, `const DATA_VERSION='${stamp}';`);
+
+  const blob = new Blob([src], {type:'text/html'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='index.html';
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+
 loadData();
 render();
 
@@ -1034,5 +1665,6 @@ document.addEventListener('mouseup', ()=>{
 
 setTimeout(updateThumb, 60);
 </script>
-</body>
-</html>
+
+
+</body></html>
